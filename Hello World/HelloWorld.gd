@@ -47,21 +47,21 @@ func _ready():  # Funzione di partenza
 	print(ifEcoseVarie())
 
 	# Stampa gli stati dei giocatori usando l'enumerazione
-	print("Stati dei giocatori:")
+	print("Stati dei giocatori: ")
 	print(StatoGiocatore.VIVO)
 	print(StatoGiocatore.FERITO)
 	print(StatoGiocatore.MORTO)
 
-	print("Punteggi:", punteggi)
-	print("Numeri nell'array:", numeriArray)
+	print("Punteggi: ", punteggi)
+	print("Numeri nell'array: ", numeriArray)
 
 	# Ciclo for che itera sull'array
 	for i in range(numeriArray.size()):
-		print("Indice:", i, "Valore:", numeriArray[i])
+		print("Indice: ", i , " Valore: ", numeriArray[i])
 
 	# Ciclo for each per iterare sul dizionario
 	for chiave in punteggi.keys():
-		print("Giocatore:", chiave, "Punteggio:", punteggi[chiave])
+		print("Giocatore: ", chiave, "Punteggio: ", punteggi[chiave])
 
 	pass
 
