@@ -18,6 +18,10 @@ config/icon="res://Hello World/icon.png"
 
 common/drop_mouse_on_gui_input_disabled=true
 
+[locale]
+
+locale_filter=[ 0, [  ] ]
+
 [physics]
 
 common/enable_pause_aware_picking=true
