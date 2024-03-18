@@ -16,3 +16,4 @@ func _on_program_start():
 
 	# Stampa il risultato nella console di Godot
 	print("Numero di caratteri nel Label:", lunghezzaTesto)
+

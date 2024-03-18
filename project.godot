@@ -21,6 +21,7 @@ common/drop_mouse_on_gui_input_disabled=true
 [locale]
 
 locale_filter=[ 0, [  ] ]
+translations=PoolStringArray( "res://Hello World/traduzioni/traduzione.am_ET.translation", "res://Hello World/traduzioni/traduzione.ar.translation", "res://Hello World/traduzioni/traduzione.el_GR.translation", "res://Hello World/traduzioni/traduzione.en.translation", "res://Hello World/traduzioni/traduzione.eo.translation", "res://Hello World/traduzioni/traduzione.es.translation", "res://Hello World/traduzioni/traduzione.ia_FR.translation", "res://Hello World/traduzioni/traduzione.it.translation", "res://Hello World/traduzioni/traduzione.ja.translation", "res://Hello World/traduzioni/traduzione.ru.translation" )
 
 [physics]
 

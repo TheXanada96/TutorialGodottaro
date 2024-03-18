@@ -1,0 +1,16 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+
+[deps]
+
+files=[ "res://Hello World/traduzioni/traduzione.it.translation", "res://Hello World/traduzioni/traduzione.eo.translation", "res://Hello World/traduzioni/traduzione.es.translation", "res://Hello World/traduzioni/traduzione.ru.translation", "res://Hello World/traduzioni/traduzione.ia_FR.translation", "res://Hello World/traduzioni/traduzione.en.translation", "res://Hello World/traduzioni/traduzione.ja.translation", "res://Hello World/traduzioni/traduzione.ar.translation", "res://Hello World/traduzioni/traduzione.am_ET.translation", "res://Hello World/traduzioni/traduzione.el_GR.translation" ]
+
+source_file="res://Hello World/traduzioni/traduzione.csv"
+dest_files=[ "res://Hello World/traduzioni/traduzione.it.translation", "res://Hello World/traduzioni/traduzione.eo.translation", "res://Hello World/traduzioni/traduzione.es.translation", "res://Hello World/traduzioni/traduzione.ru.translation", "res://Hello World/traduzioni/traduzione.ia_FR.translation", "res://Hello World/traduzioni/traduzione.en.translation", "res://Hello World/traduzioni/traduzione.ja.translation", "res://Hello World/traduzioni/traduzione.ar.translation", "res://Hello World/traduzioni/traduzione.am_ET.translation", "res://Hello World/traduzioni/traduzione.el_GR.translation" ]
+
+[params]
+
+compress=true
+delimiter=0
