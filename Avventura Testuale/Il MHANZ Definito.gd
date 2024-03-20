@@ -15,5 +15,10 @@ func _on_LineEdit_text_entered(new_text):
 
 func update_DisplayText(words):
 	$VBoxContainer/DisplayText.text = words
-	$VBoxContainer/LineEdit.clear() 
+	$VBoxContainer/HBoxContainer/LineEdit.clear() 
 	
+
+
+func _on_TextureButton_pressed():
+	var words = $VBoxContainer/HBoxContainer/LineEdit.text
+	update_DisplayText(words)
