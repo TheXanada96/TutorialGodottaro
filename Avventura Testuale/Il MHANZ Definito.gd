@@ -1,15 +1,18 @@
 extends Control
 
 var player_words = []
-var prompts = ["Pietro", "Smusi", "lezzo", "unto"]
+var prompts = ["nome", "aggettivo", "lezzo", "unto"]
 var story = "Una volta un certo %s %s un obamista %s mi ha chiamato %s perché ero albanese"
 var albanian = story % prompts
+
+
+
 
 onready var PlayerText = $VBoxContainer/HBoxContainer/LineEdit
 onready var DisplayText = $VBoxContainer/DisplayText
 
 func _ready(): 
-	DisplayText.text = albanian
+	check_player_words_lenght()
 
 
 func _on_LineEdit_text_entered(new_text):
@@ -36,12 +39,24 @@ func _on_TextureButton_pressed():
 
 func add_to_player_words():
 	player_words.append(PlayerText.text)
+	PlayerText.clear()
+	check_player_words_lenght()
 
 func is_story_done():
 	return player_words.size() == prompts.size()
 
 func check_player_words_lenght():
 	if is_story_done():
+		tell_story()
 		pass
-	if !is_story_done():
-		pass
+	else:
+		prompt_player()
+		
+
+func tell_story():
+	DisplayText.text = story % player_words
+	pass
+	
+func prompt_player():
+	DisplayText.text = "Posso avere un " + prompts[player_words.size()] + " per favore?"
+	pass 
