@@ -26,7 +26,7 @@ func _on_TextureButton_pressed():
 # Aggiunge le parole inserite dall'utente all'array
 func add_to_player_words():
 	player_words.append(PlayerText.text)
-	PlayerText.text = ""  # Cancella il testo nel campo di testo
+	DisplayText.text = ""  # Cancella il testo nel campo di testo
 	PlayerText.clear()   # Cancella il campo di testo
 	check_player_words_lenght()  # Controlla la lunghezza delle parole inserite dall'utente
 
@@ -44,7 +44,11 @@ func check_player_words_lenght():
 # Racconta la storia completa sostituendo i segnaposto con le parole inserite dall'utente
 func tell_story():
 	DisplayText.text = story % player_words
+	end_game()
 
 # Chiede all'utente il prossimo prompt da inserire
 func prompt_player():
-	DisplayText.text = "Posso avere un " + prompts[player_words.size()] + " per favore?"
+	DisplayText.text += "Posso avere un " + prompts[player_words.size()] + " per favore?"
+
+func end_game():
+		PlayerText.queue_free()

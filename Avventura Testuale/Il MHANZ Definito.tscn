@@ -60,6 +60,7 @@ margin_right = 767.0
 margin_bottom = 79.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 2 )
+clear_button_enabled = true
 
 [node name="TextureButton" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
 margin_left = 782.0
