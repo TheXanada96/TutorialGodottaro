@@ -14,6 +14,7 @@ onready var DisplayText = $VBoxContainer/DisplayText  # Elemento di testo per vi
 func _ready(): 
 	DisplayText.text = "Benvenuto Zeb89! Ci serve il campione mondiale di Serious Sam per distruggere questi obamisti invasori delle terra! "
 	check_player_words_lenght()  # Controlla la lunghezza delle parole inserite dall'utente
+	PlayerText.grab_focus()
 
 # Funzione chiamata quando l'utente preme Invio nel campo di testo
 func _on_LineEdit_text_entered(new_text):
@@ -21,7 +22,10 @@ func _on_LineEdit_text_entered(new_text):
 
 # Funzione chiamata quando l'utente preme un pulsante
 func _on_TextureButton_pressed():
-	add_to_player_words()
+	if is_story_done(): 
+		get_tree().reload_current_scene()
+	else:
+		add_to_player_words()
 
 # Aggiunge le parole inserite dall'utente all'array
 func add_to_player_words():
@@ -37,18 +41,19 @@ func is_story_done():
 # Controlla la lunghezza delle parole inserite dall'utente e gestisce di conseguenza
 func check_player_words_lenght():
 	if is_story_done():  # Se la storia è completa
-		tell_story()     # Racconta la storia completa
+		end_game()     # Racconta la storia completa
 	else:
 		prompt_player()  # Altrimenti, chiede all'utente un nuovo prompt
 
 # Racconta la storia completa sostituendo i segnaposto con le parole inserite dall'utente
 func tell_story():
 	DisplayText.text = story % player_words
-	end_game()
 
 # Chiede all'utente il prossimo prompt da inserire
 func prompt_player():
 	DisplayText.text += "Posso avere un " + prompts[player_words.size()] + " per favore?"
 
 func end_game():
-		PlayerText.queue_free()
+	PlayerText.queue_free()
+	$VBoxContainer/HBoxContainer/Label.text = "reset"
+	tell_story()
