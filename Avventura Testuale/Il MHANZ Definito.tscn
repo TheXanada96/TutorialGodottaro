@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Avventura Testuale/gfx/joystix monospace.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://Avventura Testuale/gfx/blackboard.jpg" type="Texture" id=2]
 [ext_resource path="res://Avventura Testuale/Il MHANZ Definito.gd" type="Script" id=3]
+[ext_resource path="res://Avventura Testuale/Story0.gd" type="Script" id=4]
 [ext_resource path="res://Avventura Testuale/gfx/blue_button11.png" type="Texture" id=5]
 [ext_resource path="res://Avventura Testuale/gfx/blue_button12.png" type="Texture" id=6]
 
@@ -79,6 +80,28 @@ margin_right = 976.0
 margin_bottom = 75.0
 custom_fonts/font = SubResource( 3 )
 text = "ok"
+
+[node name="StoryBook" type="Node" parent="."]
+
+[node name="Story0" type="Node" parent="StoryBook"]
+script = ExtResource( 4 )
+prompts = PoolStringArray( "un nome ", "un soggetto", "un avverbio ", "un aggettivo" )
+story = "Una volta un certo %s %s un obamista %s mi ha chiamato %s perché ero albanese"
+
+[node name="Story1" type="Node" parent="StoryBook"]
+script = ExtResource( 4 )
+prompts = PoolStringArray( "un nome ", "un soggetto", "un avverbio ", "un aggettivo" )
+story = "Una volta %s un certo bambino giocherellone %s Marco mi ha chiamato %s amico perché giocavo a %s TF2"
+
+[node name="Story2" type="Node" parent="StoryBook"]
+script = ExtResource( 4 )
+prompts = PoolStringArray( "un nome ", "un soggetto", "un avverbio ", "un aggettivo" )
+story = "Zeb89 %s è arrabbiato %s perché l'ho aggiunto %s nel nostro gioco sudicio %s"
+
+[node name="Story3" type="Node" parent="StoryBook"]
+script = ExtResource( 4 )
+prompts = PoolStringArray( "un nome ", "un soggetto", "un avverbio ", "un aggettivo" )
+story = "Un %s turco mangiakebab %s mi ha denunciato %s perché si %s"
 
 [connection signal="text_entered" from="VBoxContainer/HBoxContainer/LineEdit" to="." method="_on_LineEdit_text_entered"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/TextureButton" to="." method="_on_TextureButton_pressed"]

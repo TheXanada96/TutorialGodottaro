@@ -1,0 +1,35 @@
+[
+	{
+	"prompts": ["nome", "aggettivo", "lezzo", "unto"],
+	"story": "Una volta un certo %s %s un obamista %s mi ha chiamato %s perché ero albanese"
+	},
+	{
+	"story": "un %s capitalista del cavolo %s chiamato Giovanni Scuderi %s è %s in Corea del Nord",
+	"prompts" : ["un articolo", "un nome", "un'aggettivo", "un'altro nome"]
+	},
+	{
+	"story": "Una volta un certo ragazzo %s Salvatore %s mi ha chiamato %s perché avevo una maglia del Milan %s",
+	"prompts" : ["un articolo", "un nome", "un'aggettivo", "un'altro nome"]
+	},
+	{
+	"story": "Una volta %s un certo bambino giocherellone %s Marco mi ha chiamato %s amico perché giocavo a %s TF2",
+	"prompts" : ["un articolo", "un nome", "un'aggettivo", "un'altro nome"]
+	},
+	{
+	"story": "Un turkmeno %s chiamato Kalash %s è %s in Palestina %s",
+	"prompts" : ["un articolo", "un nome", "un'aggettivo", "un'altro nome"]
+	},
+	{
+	"story": "Un %s turco mangiakebab %s mi ha denunciato %s perché si %s",
+	"prompts" : ["un articolo", "un nome", "un'aggettivo", "un'altro nome"]
+	},
+	{
+	"story": "Un Curdo %s è scappato in %s Serbia perché lo volevano %s uccedere in Turchia %s",
+	"prompts" : ["un articolo", "un nome", "un'aggettivo", "un'altro nome"]
+	},
+	{
+	"story": "Zeb89 %s è arrabbiato %s perché l'ho aggiunto %s nel nostro gioco sudicio %s",
+	"prompts" : ["un articolo", "un nome", "un'aggettivo", "un'altro nome"]
+	}
+	]
+	

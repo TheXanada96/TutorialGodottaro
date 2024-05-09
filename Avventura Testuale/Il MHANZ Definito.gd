@@ -65,7 +65,23 @@ func _ready():
 
 func set_current_story(): 
 	randomize()
-	current_story = template[randi() % template.size()]
+	var stories = $StoryBook.get_child_count()
+	var selected_story = randi() % stories
+	#current_story = template[randi() % template.size()]
+	#current_story.prompts = $StoryBook.get_child(selected_story).prompts
+	#current_story.story = $StoryBook.get_child(selected_story).story
+	
+	var stories2 = get_from_json("StoryBook.json")
+	randomize()
+	current_story = stories2[randi() % stories2.size()]
+
+func get_from_json(filename):
+	var file = File.new()
+	file.open(filename, File.Read)
+	var text = file.get_as_text()
+	var data = parse_json(text)
+	file.close()
+	return data
 
 # Funzione chiamata quando l'utente preme Invio nel campo di testo
 func _on_LineEdit_text_entered(new_text):
