@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/8bit attempt.ogg-1f51505fd82f01a15ea36a690808be2f.oggstr"
+
+[deps]
+
+source_file="res://Platform 2D/asset di gioco/SFX/8bit attempt.ogg"
+dest_files=[ "res://.import/8bit attempt.ogg-1f51505fd82f01a15ea36a690808be2f.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

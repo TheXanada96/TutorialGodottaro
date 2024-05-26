@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/8bit attempt.mp3-125c5a7e79c5b52ad3607c3ca3210864.mp3str"
+
+[deps]
+
+source_file="res://Platform 2D/asset di gioco/SFX/8bit attempt.mp3"
+dest_files=[ "res://.import/8bit attempt.mp3-125c5a7e79c5b52ad3607c3ca3210864.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

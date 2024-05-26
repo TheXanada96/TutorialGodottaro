@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/pain.ogg-c1d95f85659bc3b06a650836e4b1f7e7.oggstr"
+
+[deps]
+
+source_file="res://Platform 2D/asset di gioco/SFX/pain.ogg"
+dest_files=[ "res://.import/pain.ogg-c1d95f85659bc3b06a650836e4b1f7e7.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
