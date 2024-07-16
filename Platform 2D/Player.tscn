@@ -9,6 +9,7 @@ height = 88.0
 
 [node name="Player" type="KinematicBody2D"]
 position = Vector2( 569, 217 )
+collision_mask = 2
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
@@ -18,5 +19,15 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="PlayerObamico" parent="." instance=ExtResource( 1 )]
+frame = 0
+playing = false
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 1000, 0 )
+current = true
+zoom = Vector2( 3, 3 )
+limit_left = 0
+limit_smoothed = true
+smoothing_enabled = true
 
 [connection signal="animazione" from="." to="PlayerObamico" method="_on_Player_animazione"]

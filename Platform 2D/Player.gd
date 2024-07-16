@@ -5,7 +5,7 @@ var motion = Vector2(0,0); var Obama = 2
 const SPEED = 1000
 const GRAVITY = 50
 const UP = Vector2(0,-1)
-const JUMP_SPEED = 1000
+const JUMP_SPEED = 2000
 
 signal animazione
 
@@ -18,10 +18,12 @@ func _physics_process(delta):
 
 
 func apply_gravity():
-	if not is_on_floor():
-		motion.y += GRAVITY
-	else:
+	if is_on_floor():
 		motion.y = 0
+	elif is_on_ceiling():
+		motion.y = 1
+	else:
+		motion.y += GRAVITY
 	
 
 
