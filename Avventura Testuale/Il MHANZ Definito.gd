@@ -124,3 +124,8 @@ func end_game():
 	PlayerText.queue_free()
 	$VBoxContainer/HBoxContainer/Label.text = "reset"
 	tell_story()
+
+
+func _on_Button_button_down():
+	get_tree().change_scene("res://Platform 2D/Platform 2D.tscn")
+	
