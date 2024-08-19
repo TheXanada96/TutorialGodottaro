@@ -1,0 +1,99 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Avventura Testuale/gfx/TheYearofTheCamel-Bold.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://Platform 2D/GameOver.gd" type="Script" id=2]
+[ext_resource path="res://Platform 2D/asset di gioco/GFX/HUD/lifes.png" type="Texture" id=3]
+[ext_resource path="res://Platform 2D/asset di gioco/GFX/Background/bg_layer1.png" type="Texture" id=4]
+[ext_resource path="res://Avventura Testuale/gfx/joystix monospace.otf" type="DynamicFontData" id=5]
+[ext_resource path="res://Platform 2D/asset di gioco/GFX/HUD/coin_bronze.png" type="Texture" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 150
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+use_filter = true
+font_data = ExtResource( 5 )
+
+[node name="GameOver" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 4 )
+expand = true
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 102.0
+margin_top = 171.0
+margin_right = 922.0
+margin_bottom = 429.0
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_right = 820.0
+margin_bottom = 183.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "GAME OVER"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 187.0
+margin_right = 820.0
+margin_bottom = 258.0
+alignment = 1
+
+[node name="RestartButton" type="TextureButton" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+margin_left = 294.0
+margin_right = 346.0
+margin_bottom = 71.0
+texture_normal = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+margin_left = 350.0
+margin_top = 11.0
+margin_right = 526.0
+margin_bottom = 60.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Try Again!"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_left = 0.2
+anchor_top = 0.2
+anchor_right = 0.2
+anchor_bottom = 0.2
+margin_left = 630.0
+margin_top = 358.0
+margin_right = 630.0
+margin_bottom = 429.0
+alignment = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
+margin_right = 126.0
+margin_bottom = 71.0
+alignment = 2
+
+[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer2"]
+margin_top = 4.0
+margin_right = 126.0
+margin_bottom = 71.0
+custom_fonts/font = SubResource( 3 )
+text = "ESCI"
+icon = ExtResource( 6 )
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/RestartButton" to="." method="_on_RestartButton_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer2/Button" to="." method="_on_Button_pressed"]

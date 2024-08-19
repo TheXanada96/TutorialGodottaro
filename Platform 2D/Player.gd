@@ -7,6 +7,7 @@ const GRAVITY = 50
 const UP = Vector2(0,-1)
 const JUMP_SPEED = 2000
 const WORLD_LIMIT = 4000
+var lives = 3
 
 signal animazione
 
@@ -23,7 +24,8 @@ func _process(delta: float) -> void:
 
 
 func apply_gravity():
-	
+	if position.y > WORLD_LIMIT:
+		end_game()
 	if is_on_floor():
 		motion.y = 0
 	elif is_on_ceiling():
@@ -36,7 +38,8 @@ func apply_gravity():
 func jump():
 	if Input.is_action_pressed("Jump") and is_on_floor() :
 		motion.y -= JUMP_SPEED
-
+		$AudioStreamPlayer2D.stream = load("res://Platform 2D/asset di gioco/SFX/jump1.ogg")
+		$AudioStreamPlayer2D.play()
 
 func move():
 	if Input.is_action_pressed("ui_left")\
@@ -51,7 +54,17 @@ func move():
 
 func animate():
 	emit_signal("animazione", motion)
-	
+
+func end_game():
+	get_tree().change_scene("res://Platform 2D/EndGame.tscn")
+
+func hurt():
+	motion.y -= 1
+	yield (get_tree(), "idle_frame")
+	motion.y -= JUMP_SPEED
+	lives -= 1
+	if lives < 0:
+		end_game()
 
 #	if motion.y <0:
 #		$PlayerObamico.play("jump")
