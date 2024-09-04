@@ -7,9 +7,12 @@ const GRAVITY = 50
 const UP = Vector2(0,-1)
 const JUMP_SPEED = 2000
 const WORLD_LIMIT = 4000
-var lives = 3
+const BOOST_MULTIPLIER = 2
+
+#var lives = 3
 
 signal animazione
+
 
 func _physics_process(delta):
 	apply_gravity()
@@ -25,8 +28,8 @@ func _process(delta: float) -> void:
 
 func apply_gravity():
 	if position.y > WORLD_LIMIT:
-		end_game()
-	if is_on_floor():
+		get_tree().call_group("Gamestate", "end_game")
+	if is_on_floor() and motion.y > 0:
 		motion.y = 0
 	elif is_on_ceiling():
 		motion.y = 1
@@ -37,9 +40,8 @@ func apply_gravity():
 
 func jump():
 	if Input.is_action_pressed("Jump") and is_on_floor() :
-		motion.y -= JUMP_SPEED
-		$AudioStreamPlayer2D.stream = load("res://Platform 2D/asset di gioco/SFX/jump1.ogg")
-		$AudioStreamPlayer2D.play()
+		motion.y = -JUMP_SPEED
+		$JumpSFX.play()
 
 func move():
 	if Input.is_action_pressed("ui_left")\
@@ -55,17 +57,23 @@ func move():
 func animate():
 	emit_signal("animazione", motion)
 
-func end_game():
-	get_tree().change_scene("res://Platform 2D/EndGame.tscn")
+#func end_game():
+#	get_tree().change_scene("res://Platform 2D/EndGame.tscn")
 
 func hurt():
 	motion.y -= 1
 	yield (get_tree(), "idle_frame")
 	motion.y -= JUMP_SPEED
-	lives -= 1
-	if lives < 0:
-		end_game()
-
+	#lives -= 1
+	$PainSFX.play()
+#	if lives < 0:
+#		end_game()
+		
+func boost():
+	motion.y -= 1
+	yield (get_tree(), "idle_frame")
+	motion.y -= JUMP_SPEED * BOOST_MULTIPLIER
+	pass
 #	if motion.y <0:
 #		$PlayerObamico.play("jump")
 #	elif motion.x >= 0:
