@@ -32,3 +32,6 @@ func life_up():
 
 func end_game():
 	get_tree().change_scene("res://Platform 2D/EndGame.tscn")
+
+func win():
+	get_tree().change_scene("res://Platform 2D/Victory.tscn")
