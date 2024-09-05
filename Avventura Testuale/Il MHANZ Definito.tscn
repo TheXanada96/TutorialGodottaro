@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Avventura Testuale/gfx/joystix monospace.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://Avventura Testuale/gfx/blackboard.jpg" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Avventura Testuale/gfx/blue_button11.png" type="Texture" id=5]
 [ext_resource path="res://Avventura Testuale/gfx/blue_button12.png" type="Texture" id=6]
 [ext_resource path="res://Platform 2D/asset di gioco/GFX/Enemies/sun1.png" type="Texture" id=7]
+[ext_resource path="res://Platform 2D/asset di gioco/GFX/Enemies/cloud.png" type="Texture" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -117,6 +118,8 @@ margin_top = 12.0
 margin_right = 262.0
 margin_bottom = 166.0
 rect_scale = Vector2( 0.32, 0.32 )
+size_flags_stretch_ratio = 2.0
+custom_constants/separation = 50
 
 [node name="Button" type="Button" parent="HBoxContainer"]
 margin_right = 484.0
@@ -125,6 +128,15 @@ custom_fonts/font = SubResource( 4 )
 text = "PLATFORM2D"
 icon = ExtResource( 7 )
 
+[node name="Button2" type="Button" parent="HBoxContainer"]
+margin_left = 534.0
+margin_right = 1171.0
+margin_bottom = 154.0
+custom_fonts/font = SubResource( 4 )
+text = "HELLO WORLD"
+icon = ExtResource( 8 )
+
 [connection signal="text_entered" from="VBoxContainer/HBoxContainer/LineEdit" to="." method="_on_LineEdit_text_entered"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/TextureButton" to="." method="_on_TextureButton_pressed"]
 [connection signal="button_down" from="HBoxContainer/Button" to="." method="_on_Button_button_down"]
+[connection signal="button_down" from="HBoxContainer/Button2" to="." method="_on_Button2_button_down"]

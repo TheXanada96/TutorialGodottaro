@@ -129,3 +129,11 @@ func end_game():
 func _on_Button_button_down():
 	get_tree().change_scene("res://Platform 2D/Platform 2D.tscn")
 	
+
+
+func _on_Button2_button_down():
+	get_tree().change_scene("res://Hello World/HelloWorld.tscn")
+
+func _input(event):
+	if event.is_action_pressed("ui_cancel"):  # "ui_cancel" è mappato al tasto "Esc" per default
+		get_tree().change_scene("res://Avventura Testuale/Il MHANZ Definito.tscn")

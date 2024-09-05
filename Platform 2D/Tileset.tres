@@ -1,12 +1,12 @@
 [gd_resource type="TileSet" load_steps=18 format=2]
 
-[ext_resource path="res://Platform 2D/asset di gioco/GFX/Environment/ground_grass_small.png" type="Texture" id=1]
-[ext_resource path="res://Platform 2D/asset di gioco/GFX/Environment/ground_grass.png" type="Texture" id=2]
+[ext_resource path="res://Platform 2D/asset di gioco/GFX/Environment/ground_sand.png" type="Texture" id=1]
+[ext_resource path="res://Platform 2D/asset di gioco/GFX/Environment/ground_sand_small.png" type="Texture" id=2]
 [ext_resource path="res://Platform 2D/asset di gioco/GFX/Environment/ground_snow_small.png" type="Texture" id=3]
-[ext_resource path="res://Platform 2D/asset di gioco/GFX/Environment/ground_sand.png" type="Texture" id=4]
-[ext_resource path="res://Platform 2D/asset di gioco/GFX/Environment/ground_cake_small.png" type="Texture" id=5]
-[ext_resource path="res://Platform 2D/asset di gioco/GFX/Environment/ground_sand_small.png" type="Texture" id=6]
-[ext_resource path="res://Platform 2D/asset di gioco/GFX/Environment/ground_cake.png" type="Texture" id=7]
+[ext_resource path="res://Platform 2D/asset di gioco/GFX/Environment/ground_grass_small.png" type="Texture" id=4]
+[ext_resource path="res://Platform 2D/asset di gioco/GFX/Environment/ground_grass.png" type="Texture" id=5]
+[ext_resource path="res://Platform 2D/asset di gioco/GFX/Environment/ground_cake.png" type="Texture" id=6]
+[ext_resource path="res://Platform 2D/asset di gioco/GFX/Environment/ground_cake_small.png" type="Texture" id=7]
 [ext_resource path="res://Platform 2D/asset di gioco/GFX/Environment/ground_snow.png" type="Texture" id=8]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
@@ -38,7 +38,7 @@ points = PoolVector2Array( -98, -17, -96, -41, -85, -50, 88, -50, 100, -43, 102,
 
 [resource]
 0/name = "GroundGrassSmall"
-0/texture = ExtResource( 1 )
+0/texture = ExtResource( 4 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 201, 100 )
@@ -59,7 +59,7 @@ points = PoolVector2Array( -98, -17, -96, -41, -85, -50, 88, -50, 100, -43, 102,
 } ]
 0/z_index = 0
 1/name = "GroundCake"
-1/texture = ExtResource( 7 )
+1/texture = ExtResource( 6 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 0, 0, 380, 94 )
@@ -80,7 +80,7 @@ points = PoolVector2Array( -98, -17, -96, -41, -85, -50, 88, -50, 100, -43, 102,
 } ]
 1/z_index = 0
 2/name = "GroundCakeSmall"
-2/texture = ExtResource( 5 )
+2/texture = ExtResource( 7 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 0, 0, 201, 100 )
@@ -101,7 +101,7 @@ points = PoolVector2Array( -98, -17, -96, -41, -85, -50, 88, -50, 100, -43, 102,
 } ]
 2/z_index = 0
 3/name = "GroundGrass"
-3/texture = ExtResource( 2 )
+3/texture = ExtResource( 5 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
 3/region = Rect2( 0, 0, 380, 94 )
@@ -122,7 +122,7 @@ points = PoolVector2Array( -98, -17, -96, -41, -85, -50, 88, -50, 100, -43, 102,
 } ]
 3/z_index = 0
 4/name = "GroundSand"
-4/texture = ExtResource( 4 )
+4/texture = ExtResource( 1 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 0, 0, 380, 94 )
@@ -143,7 +143,7 @@ points = PoolVector2Array( -98, -17, -96, -41, -85, -50, 88, -50, 100, -43, 102,
 } ]
 4/z_index = 0
 5/name = "GroundSandSmall"
-5/texture = ExtResource( 6 )
+5/texture = ExtResource( 2 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
 5/region = Rect2( 0, 0, 201, 100 )

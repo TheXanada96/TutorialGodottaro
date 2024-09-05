@@ -2,10 +2,8 @@ extends Node2D
 
 # Variabili globali
 var a = 2
-var b = 3 # variabile globale
+var b = 3 
 var contatore : int = 0
-
-# Altri tipi di variabili
 var numero = 52
 var virgola = 56.65
 var numeroSpecificato: int = 45
@@ -31,20 +29,23 @@ export (int) var ses
 export (String, DIR) var cartellaEsterna
 export (String, FILE, "*.png") var fileEsterno
 
-func somma(a,b):
+# Funzione che moltiplica due numeri
+func somma(a, b):
 	return a * b # Variabili locali
 
+# Funzione che concatena due stringhe con uno spazio in mezzo
 func sommaDue(a : String, b: String) -> String:
 	return a + " " + b
 
-func _ready():  # Funzione di partenza
-	print(numero)
-	print(virgola)
-	print(a + b)
-	print(somma(2, 5))
-	print(sommaDue("Sesso", "Turkmeno"))
+# Funzione di partenza
+func _ready():
+	print(numero)  # Stampa il valore della variabile 'numero'
+	print(virgola)  # Stampa il valore della variabile 'virgola'
+	print(a + b)  # Stampa la somma delle variabili globali 'a' e 'b'
+	print(somma(2, 5))  # Stampa il risultato della funzione 'somma' con argomenti 2 e 5
+	print(sommaDue("Sesso", "Turkmeno"))  # Stampa il risultato della funzione 'sommaDue' con argomenti "Sesso" e "Turkmeno"
 
-	print(ifEcoseVarie())
+	print(ifEcoseVarie())  # Stampa il risultato della funzione 'ifEcoseVarie'
 
 	# Stampa gli stati dei giocatori usando l'enumerazione
 	print("Stati dei giocatori: ")
@@ -52,7 +53,9 @@ func _ready():  # Funzione di partenza
 	print(StatoGiocatore.FERITO)
 	print(StatoGiocatore.MORTO)
 
+	# Stampa il dizionario 'punteggi'
 	print("Punteggi: ", punteggi)
+	# Stampa l'array 'numeriArray'
 	print("Numeri nell'array: ", numeriArray)
 
 	# Ciclo for che itera sull'array
@@ -106,7 +109,10 @@ func ifEcoseVarie():
 
 	# Commento multilinea
 	"""
-	LEZZO questo è un commento multilinea!!!!
-	ZEB89 è FIERO MAONNA
+	Questo è un commento multilinea.
 	"""
 	return "Fine della funzione"
+
+func _input(event):
+	if event.is_action_pressed("ui_cancel"):  # "ui_cancel" è mappato al tasto "Esc" per default
+		get_tree().change_scene("res://Avventura Testuale/Il MHANZ Definito.tscn")
